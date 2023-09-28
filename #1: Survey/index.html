@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>freeCodeCamp Survey Form</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width", initial-scale="1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description"><em>Thank you for taking the time to help us improve the platform</em></p>
+    <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <legend>Basic Info</legend>
+        <label for="name-label" id="name-label">Name <input id="name" type="text" name="name" placeholder="Enter your name" required /></label>
+        <label for="email-label" id="email-label">Email <input id="email" type="email" name="email" placeholder="Enter your email" required /></label>
+        <label for="number-label" id="number-label">Age (optional) <input id="number" type="number" name="age" placeholder="Enter your age" pattern="[0-9]" min="12" max="120" /></label>
+      </fieldset>
+      <fieldset>
+        <legend>What is your favorite feature of freeCodeCamp?</legend>
+          <select id="dropdown">
+            <option value="">(Select One)</option>
+            <option value="1">Cool People</option>
+            <option value="2">Good Instructions</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Would you choose sky diving over cliff diving?</legend>
+        <label for="definitely"><input id="definitely" type="radio" name="recommend" value="definitely" class="inline" /> Definitely</label>
+        <label for="maybe"><input id="maybe" type="radio" name="recommend" value="maybe" class="inline" /> Maybe</label>
+        <label for="not-sure"><input id="not-sure" type="radio" name="recommend" value="not-sure" class="inline" /> Not Sure</label>
+      </fieldset>
+      <fieldset>
+        <legend>Here are some completely miscellaneous things!</legend>
+        <label for="pizza"><input id="pizza" type="checkbox" name="miscellaneous" value="pizza" /> Pizza</label>
+        <label for="popcorn"><input id="popcorn" type="checkbox" name="miscellaneous" value="popcorn" /> Popcorn</label>
+        <label for="candy"><input id="candy" type="checkbox" name="miscellaneous" value="candy" /> Candy</label>
+        <label for="soda"><input id="soda" type="checkbox" name="miscellaneous" value="soda" /> Soda</label>
+        <label for="thats-what-they-got"><input id="thats-what-they-got" type="checkbox" name="thats-what-they-got" value="thats-what-they-got" /> That's What They GOT!</label>
+      </fieldset>
+      <fieldset>
+        <legend>Provide a punk description</legend>
+        <label for="punk">
+          <textarea id="punk" name="punk" rows="5" cols="30" placeholder="I lick the yogurt off the foil and then stick it onto a bat that delivers my metal to satan"></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" id="submit" class="submit"/>
+    </form>
+    </section>
+  </body>
+</html>
