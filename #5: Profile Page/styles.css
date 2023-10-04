@@ -1,64 +1,178 @@
 :root {
-    --background-color: #224;
-    --title-color: #BBF;
+  --background-color-1: #224;
+  --title-color: #BBF;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .project-tile {
+    grid-template-columns: 1fr;
   }
-  
-  *, *::before, *::after {
-    box-sizing: inherit;
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Helvetica, sans-serif;
-    font-size: 16px;
-  
-  }
-  
-  .nav {
-    width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: flex-end;
-    top: 0;
-    left: 0;
-    background: var(--background-color);
-    color: var(--title-color);
-    border-bottom: 1px solid black;
-  }
-  
-  .nav-list {
-    list-style: none;
-    font-weight: 600;
-    font-size: 22px;
-    display: flex;
-    padding: 1rem;
-  }
-  
-  .list-item a {
-    padding: 1rem;
-  }
-  
-  .list-item a:hover {
-    background: #779;
-  }
-  
-  a {
-    color: var(--title-color);
-    text-decoration: none;
-  }
-  
-  #welcome-section {
-    width: 100%;
-    height: 100vh;
-    background: #446;
-    background-image: linear-gradient(65deg, #335, #99B);
-  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 58px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.nav {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+  background: var(--background-color-1);
+  color: var(--title-color);
+}
+
+.nav-list {
+  list-style: none;
+  font-weight: 600;
+  font-size: 22px;
+  display: flex;
+  padding: 1rem;
+}
+
+.list-item a {
+  padding: 1rem;
+}
+
+.list-item a:hover {
+  background: #779;
+  border-radius: 2px;
+}
+
+a {
+  color: var(--title-color);
+  text-decoration: none;
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(65deg, #335, #99D);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.welcome-title {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  text-shadow: 2px 2px 2px var(--background-color-1);
+}
+
+.welcome-subtitle {
+  text-shadow: 2px 2px 2px var(--background-color-1);
+}
+
+.section-title {
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  padding: 2rem;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 2px var(--background-color-1);
+}
+
+#projects {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-65deg, #229, #99F);
+  border-top: 1px solid white;
+}
+
+.project-tile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  justify-items: center;
+}
+
+.project-link {
+  width: 250px;
+  height: 250px;
+}
+
+.project-image {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  border: 1px solid white;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px var(--background-color-1);
+}
+
+.project-title {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 2px 2px 2px var(--background-color-1);
+}
+
+#contact-info {
+  height: 100vh;
+  width: 100%;
+  border-top: 1px solid white;
+  background: linear-gradient(-25deg, #ffe4cd, #145388);
+}
+
+.social-icons {
+  display: grid;
+  font-size: 3rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-tile {
+  display: grid;
+  font-size: 3rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
+  justify-items: center;
+  max-width: 600px;
+}
+
+.contact-image {
+  max-width: 50px;
+  object-fit: cover;
+
+}
+
+.contact-info {
+  color: white;
+  text-shadow: 2px 2px 2px var(--background-color-1);
+}
