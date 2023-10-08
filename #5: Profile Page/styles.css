@@ -12,9 +12,26 @@
   margin: 0;
 }
 
-@media only screen and (max-width: 500px) {
-  .project-tile {
-    grid-template-columns: 1fr;
+@media only screen and (max-width: 576px) {
+  a.project-link:nth-child(n + 2):nth-child(-n+4) {
+    grid-template-columns: repeat(1, 100px);
+    grid-column: 1;
+    grid-gap: 0;
+    margin: 0 auto;
+    justify-items: center;
+    justify-content: center;
+  }
+  #projects {
+    width: 100%;
+    height: auto;
+  }
+  .project-link {
+  width: 100px;
+  height: 100px;
+  }
+  .project-image {
+  height: 40%;
+  width: 40%;
   }
 }
 
@@ -22,6 +39,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 58px;
   box-sizing: border-box;
+  position: relative;
 }
 
 body {
@@ -38,6 +56,15 @@ body {
   left: 0;
   background: var(--background-color-1);
   color: var(--title-color);
+}
+
+.nav-title {
+  display: inline-block;
+  width: 55%;
+  min-width: 75px;
+  text-align: left;
+  margin: 15;
+  color: linen;
 }
 
 .nav-list {
@@ -81,6 +108,36 @@ a {
   text-shadow: 2px 2px 2px var(--background-color-1);
 }
 
+.text-animate {
+  animation: title 8s ease-in-out infinite;
+  padding: 10px;
+}
+
+@keyframes title {
+  0% {
+    transform: rotate(0deg);
+    color: white;
+  }
+  25% {
+    transform: rotate(15deg);
+    color: #FF9;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+
+  }
+  75% {
+    transform: rotate(-15deg);
+    filter: hue-rotate(360deg);
+    color: #99F;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
 .welcome-subtitle {
   text-shadow: 2px 2px 2px var(--background-color-1);
 }
@@ -104,7 +161,7 @@ a {
 
 .project-tile {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
   width: 100%;
   max-width: 960px;
@@ -116,6 +173,11 @@ a {
 .project-link {
   width: 250px;
   height: 250px;
+}
+
+.project-link:hover {
+  transform: scale(1.1);
+  transition: .4s;
 }
 
 .project-image {
@@ -158,12 +220,13 @@ a {
 .contact-tile {
   display: grid;
   font-size: 3rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 6fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-auto-flow: row;
   grid-auto-rows: 1fr;
-  justify-items: center;
+  justify-items: left;
   max-width: 600px;
+  margin: 3rem auto;
 }
 
 .contact-image {
@@ -173,6 +236,25 @@ a {
 }
 
 .contact-info {
+  color: white;
+  text-shadow: 2px 2px 2px var(--background-color-1);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 58;
+  left: 0;
+  width: 100%;
+}
+
+.footer-text {
+  width: 100%;
+  text-align: center;
+  background: #145388;
+  font-size: 1.5rem;
   color: white;
   text-shadow: 2px 2px 2px var(--background-color-1);
 }
