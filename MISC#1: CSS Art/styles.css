@@ -1,0 +1,60 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: black;
+    z-index: 1;
+}
+
+.background {
+    width: 100vw;
+    height: 750px;
+    position: relative;
+    z-index: 2;
+}
+
+.layer-1 {
+    width: 100vw;
+    height: 150px;
+    background: linear-gradient(black, #224);
+    z-index: 2;
+    position: absolute;
+}
+
+.layer-2 {
+    width: 100vw;
+    height: 150px;
+    background: linear-gradient(#224, #336);
+    z-index: 2;
+    position: absolute;
+    top: 150px;
+}
+
+.layer-3 {
+    width: 100vw;
+    height: 150px;
+    background: linear-gradient(#336, #448);
+    z-index: 2;
+    position: absolute;
+    top: 300px;
+}
+
+.layer-4 {
+    width: 100vw;
+    height: 150px;
+    background: linear-gradient(#448, #55A);
+    z-index: 2;
+    position: absolute;
+    top: 450px;
+}
+
+.layer-5 {
+    width: 100vw;
+    height: 150px;
+    background: linear-gradient(#55A, #66C);
+    z-index: 2;
+    position: absolute;
+    top: 600px;   
+}
