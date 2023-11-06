@@ -1,0 +1,2 @@
+var lengthPrompt = prompt("Please type in characters so we can verify the character count:");
+console.log("You have typed " + lengthPrompt.length + " characters. You have " + ('140' - lengthPrompt.length) + " characters left.");
