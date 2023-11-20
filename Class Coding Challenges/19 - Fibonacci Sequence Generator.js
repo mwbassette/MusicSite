@@ -22,7 +22,7 @@ function fibonacciGenerator (n) {
 
 
 
-// OLD ONES BELOW:
+// OLD IDEAS BELOW:
 
 
 // function fibonacciGenerator (n) {
