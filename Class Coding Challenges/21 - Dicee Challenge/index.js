@@ -1,6 +1,21 @@
-var randomNumber1 = Math.random() * 6;
-randomNumber1 = Math.floor(randomNumber1) + 1;
+var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+var randomPicture1 = "images/dice" + randomNumber1 + ".png";
+var randomPicture2 = "images/dice" + randomNumber2 + ".png";
 
-var firstDiceSource = 'images/dice'+randomNumber1+'.png';
-document.querySelector("img.img1").setAttribute("src",firstDiceSource); 
 
+var firstDiceElement = document.querySelectorAll("img")[0];
+firstDiceElement.setAttribute("src", randomPicture1);
+var secondDiceElement = document.querySelectorAll("img")[1];
+secondDiceElement.setAttribute("src", randomPicture2);
+
+
+if (randomNumber1 > randomNumber2) {
+    document.querySelector("h1").innerHTML = "Player One Wins!"
+}
+else if (randomNumber1 < randomNumber2) {
+    document.querySelector("h1").innerHTML = "Player Two Wins!"
+}
+else if (randomNumber1 === randomNumber2) {
+    document.querySelector("h1").innerHTML = "It's A Draw!"
+}
