@@ -24,7 +24,7 @@
 
 
 // My Solution:
-var allButtons = document.querySelectorAll("button");
+var allButtons = document.querySelectorAll(".drum");
 function handleClick() {
     alert("I got clicked!");
 }
