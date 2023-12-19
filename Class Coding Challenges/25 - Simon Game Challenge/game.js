@@ -3,6 +3,7 @@
 
 var buttonColors = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
+var userClickedPattern = [];
 
 function colorCycleProcess() {
     var randomNumber = Math.floor(Math.random() * 4);
@@ -12,6 +13,26 @@ function colorCycleProcess() {
     var buttonAudio = new Audio("sounds/" + randomChosenColor + ".mp3");
     buttonAudio.play();
 }
+
+$(".btn").on("click", function(clicked_button) {
+    var userChosenColor = $(clicked_button).attr("id");
+    userClickedPattern.push(userChosenColor);
+    
+});
+console.log(userClickedPattern);
+
+// It seems click() is deprecated, find a way to get the userChosenColor
+// console logged and appended to the userClickedPattern
+
+
+
+
+
+
+
+
+
+
 
 
 // function produceRandomNumber() {
