@@ -1,38 +1,49 @@
-// alert("I'm loaded just fine!");
-
-
 var buttonColors = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 
-function colorCycleProcess() {
+$(".btn").on("click", function() {
+    var userChosenColor = $(this).attr("id");
+    userClickedPattern.push(userChosenColor);
+    playSound(userChosenColor);
+})
+
+function nextSequenceProcess() {
     var randomNumber = Math.floor(Math.random() * 4);
     var randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
-    var buttonAudio = new Audio("sounds/" + randomChosenColor + ".mp3");
+    playSound(randomChosenColor);
+}
+
+function playSound(name) {
+    var buttonAudio = new Audio("sounds/" + name + ".mp3");
     buttonAudio.play();
 }
 
-$(".btn").on("click", function(clicked_button) {
-    var userChosenColor = $(clicked_button).attr("id");
-    userClickedPattern.push(userChosenColor);
-    
-});
-console.log(userClickedPattern);
-
-// It seems click() is deprecated, find a way to get the userChosenColor
-// console logged and appended to the userClickedPattern
+function animatePress(currentColor) {
+    $(".btn").on("click", function() {
+        $(this).addClass("pressed").setTimeout(100).removeClass("pressed");
+    })
+}
 
 
 
+// alert("I'm loaded just fine!");
+
+// $(".btn").on("click", function() {
+//     var userChosenColor = $(this).attr("id");
+//     userClickedPattern.push(userChosenColor); 
+//     playSound(userChosenColor);
+//     var clickedButtonAudio = new Audio("sounds/" + userChosenColor + ".mp3");
+//     clickedButtonAudio.play();
+// });
+// 12/20/23 - originally this was all part of one giant 'playSound()' function,
+// but the course separates these concerns.
 
 
 
-
-
-
-
+// console.log(userClickedPattern);
 
 
 // function produceRandomNumber() {
