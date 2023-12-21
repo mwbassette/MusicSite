@@ -6,6 +6,7 @@ $(".btn").on("click", function() {
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
     playSound(userChosenColor);
+    animatePress(userChosenColor);
 })
 
 function nextSequenceProcess() {
@@ -22,9 +23,11 @@ function playSound(name) {
 }
 
 function animatePress(currentColor) {
-    $(".btn").on("click", function() {
-        $(this).addClass("pressed").setTimeout(100).removeClass("pressed");
-    })
+    // $(this).removeClass(userChosenColor).addClass("pressed").setTimeout(100).removeClass("pressed").addClass(userChosenColor);
+    $("#" + currentColor).addClass("pressed").setTimeout(function(){
+        // $("#" + currentColor).removeClass("pressed")
+        alert("I am setTimeout");
+    },100);
 }
 
 
