@@ -1,38 +1,50 @@
 var buttonColors = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
+var gameStarted = false;
 var level = 0;
 
-$(document).keydown(function(event) {
-    if (gamePattern.length === 0) {
-        $("#level-title").text("Level 0");
+$(document).keydown(function() {
+    if (!gameStarted) {
+        $("#level-title").text("Level " + level);
         processNextSequence();
+        gameStarted = true;
     }
-})
+});
 
 $(".btn").on("click", function() {
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
     playSound(userChosenColor);
     animatePress(userChosenColor);
-    checkAnswer(userClickedPattern[userClickedPattern.length - 1]);
+    checkAnswer(userClickedPattern.length - 1);
 })
 
 function processNextSequence() {
+    userClickedPattern = [];
     level++;
+    $("#level-title").text("Level " + level);
     var randomNumber = Math.floor(Math.random() * 4);
     var randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColor);
-    $("#level-title").text("Level " + level);
 }
 
 function checkAnswer(currentLevel) {
-    if (userClickedPattern[userClickedPattern.length - 1] === gamePattern[gamePattern.length - 1]) {
-        console.log("success");
-    } else {
+    if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
+        console.log("Good job!");  
+
+        if (userClickedPattern.length === gamePattern.length) {
+        console.log("This level is finished.");
+        setTimeout(function() {
+            processNextSequence();
+        }, 1000);
+        }
+    }    
+    else {
         console.log("wrong");
+        $("#level-title").text("GAME OVER! Refresh To Try Again!");
     }
 }
 
@@ -51,6 +63,13 @@ function animatePress(currentColor) {
 
 
 // alert("I'm loaded just fine!");
+
+// $(document).keydown(function(event) {
+//     if (gamePattern.length === 0) {
+//         $("#level-title").text("Level 0");
+//         processNextSequence();
+//     }
+// })
 
 // $(".btn").on("click", function() {
 //     var userChosenColor = $(this).attr("id");
