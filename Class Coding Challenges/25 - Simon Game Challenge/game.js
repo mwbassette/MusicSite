@@ -44,7 +44,8 @@ function checkAnswer(currentLevel) {
     }    
     else {
         console.log("wrong");
-        $("#level-title").text("GAME OVER! Refresh To Try Again!");
+        showGameOverScreen();
+        resetTheGame();
     }
 }
 
@@ -58,6 +59,21 @@ function animatePress(currentColor) {
     setTimeout(() => {
         $("#" + currentColor).removeClass("pressed")
     }, 100);
+}
+
+function showGameOverScreen() {
+    $("#level-title").text("GAME OVER! Press Any Key To Restart.");
+    playSound("wrong");
+    $("body").addClass("game-over");
+    setTimeout(() => {
+        $("body").removeClass("game-over")
+    }, 200);
+}
+
+function resetTheGame() {
+    gamePattern = [];
+    level = 0;
+    gameStarted = false;
 }
 
 
