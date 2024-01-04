@@ -4,6 +4,7 @@ var gamePattern = [];
 var gameStarted = false;
 var level = 0;
 
+//done
 $(document).on("keydown", function() {
     if (!gameStarted) {
         $("#level-title").text("Level " + level);
@@ -14,8 +15,9 @@ $(document).on("keydown", function() {
 
 $(".btn").on("click", function() {
     $(this).push(userClickedPattern);
-    playSound();
-    animateButton();
+    checkAnswer(this);
+    playSound(this);
+    animateButton(this);
     processNextSequence();
 })
 
@@ -37,26 +39,38 @@ function checkAnswer(currentAnswer) {
                 processNextSequence();
             }, 100);
         }
+    } else {
+        console.log("Sorry, you suck.");
+        gameOverSequence();
+        resetTheGame();
     }
 }
 
+//done
 function playSound(name) {
     var buttonAudio = new Audio("sounds/" + name + ".mp3");
     buttonAudio.play();
 }
 
-function animateButton() {
+//done
+function animateButton(clickedButton) {
     $(".btn").on("click", function() {
-        $(this).addClass("pressed").setTimeout(() => {
+        $("#" + clickedButton).addClass("pressed").setTimeout(() => {
             removeClass("pressed");
         }, 100);
     })
 }
 
+//done
 function gameOverSequence() {
-
+    $("#level-title").text("GAME OVER. Press Any Key To Continue.");
+    playSound("wrong");
+    $("body").addClass("game-over").setTimeout(() => {
+        removeClass("game-over");
+    }, 100);
 }
 
+//done
 function resetTheGame() {
     gamePattern = [];
     level = 0;
