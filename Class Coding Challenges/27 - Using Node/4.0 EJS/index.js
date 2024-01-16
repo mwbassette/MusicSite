@@ -9,38 +9,55 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+app.get("/", (req, res) => {
+    const d = new Date();
+    const day = d.getDay();
+    let type = "a weekday";
+    let action = "it's time to work hard";
 
-const todayDate = Date.now();
-console.log(todayDate);
-
-function checkIfWeekEnd() {
-    const randomTestNumberBtwnZeroAndSix = Math.floor(Math.random() * 6);
-    if (dayNames[randomTestNumberBtwnZeroAndSix === 0 || 6]) {
-
+    if (day === 0 || day === 6) {
+        type = "the weekend";
+        action = "it's time to have some fun";
     }
-}
 
-function decideActionBasedOnDay() {
-    if (dayNames)
-}
-
-app.use(checkIfWeekEnd);
-
-app.get("/", (req, res) => {
-    res.render("index.ejs",
-    { day: req.body[checkIfWeekEnd] }
-    { action: req.body}
-    
-    );
+    res.render("index.ejs", { 
+        typeOfDay: type, 
+        whatToDo: action, 
+    });
 });
-
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "index.js");
-});
-
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
   
+
+// const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+// const todayDate = Date.now();
+// console.log(todayDate);
+
+// function checkIfWeekEnd() {
+//     var randomTestNumberBtwnZeroAndSix = Math.floor(Math.random() * 6);
+//     if (dayNames[randomTestNumberBtwnZeroAndSix === 0 || 6]) {
+//         var weekend = true;
+//         showWeekendHTMLVersion();
+//     } else {
+//         var weekend = false;
+//         showWeekdayHTMLVersion();
+//     }
+// }
+
+// function showWeekendHTMLVersion() {
+    
+// }
+
+// function showWeekdayHTMLVersion() {
+
+// }
+
+// app.use(checkIfWeekEnd);
+// app.use(showWeekdayHTMLVersion);
+// app.use(showWeekendHTMLVersion);
+// app.get("/", (req, res) => {
+//     res.sendFile(__dirname + "index.js");
+// });
