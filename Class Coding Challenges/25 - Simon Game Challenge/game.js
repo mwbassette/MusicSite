@@ -19,7 +19,7 @@ function handleClickForGameSequence() {
 function startTheGame() {
     if (!gameStarted) {
         $("#level-title").text("Level " + level);
-        processNextSequence();
+        startNextLevel();
         gameStarted = true;
     }
 }
@@ -30,7 +30,7 @@ function addNextColorToSequence() {
     gamePattern.push(randomChosenColor);
 }
 
-function processNextSequence() {
+function startNextLevel() {
     userClickedPattern = [];
     level++;
 
@@ -49,7 +49,7 @@ function checkAnswer(currentLevel) {
         if (userClickedPattern.length === gamePattern.length) {
         console.log("This level is finished.");
         setTimeout(function() {
-            processNextSequence();
+            startNextLevel();
         }, 1000);
         }
     }    
