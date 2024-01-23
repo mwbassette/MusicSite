@@ -6,13 +6,15 @@ var level = 0;
 
 $(document).keydown(startTheGame);
 
-$(".btn").on("click", function() {
+$(".btn").on("click", handleClickForGameSequence);
+
+function handleClickForGameSequence() {
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
     playSound(userChosenColor);
     animatePress(userChosenColor);
     checkAnswer(userClickedPattern.length - 1);
-})
+}
 
 function startTheGame() {
     if (!gameStarted) {
@@ -22,13 +24,20 @@ function startTheGame() {
     }
 }
 
-function processNextSequence() {
-    userClickedPattern = [];
-    level++;
-    $("#level-title").text("Level " + level);
+function addNextColorToSequence() {
     var randomNumber = Math.floor(Math.random() * 4);
     var randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
+}
+
+function processNextSequence() {
+    userClickedPattern = [];
+    level++;
+
+    $("#level-title").text("Level " + level);
+
+    addNextColorToSequence();
+
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColor);
 }
@@ -85,7 +94,7 @@ function resetTheGame() {
 // $(document).keydown(function(event) {
 //     if (gamePattern.length === 0) {
 //         $("#level-title").text("Level 0");
-//         processNextSequence();
+//         ();
 //     }
 // })
 
