@@ -43,14 +43,18 @@ function startNextLevel() {
 }
 
 function checkAnswer(currentLevel) {
-    if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
+    const doesButtonClickMatch = userClickedPattern[currentLevel] === gamePattern[currentLevel]
+
+    if (doesButtonClickMatch) {
         console.log("Good job!");  
 
-        if (userClickedPattern.length === gamePattern.length) {
-        console.log("This level is finished.");
-        setTimeout(function() {
-            startNextLevel();
-        }, 1000);
+        const isLastStep = userClickedPattern.length === gamePattern.length
+
+        if (isLastStep) {
+            console.log("This level is finished.");
+            setTimeout(function() {
+                startNextLevel();
+            }, 1000);
         }
     }    
     else {
