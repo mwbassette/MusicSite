@@ -18,7 +18,7 @@ function handleClickForGameSequence() {
 
 function startTheGame() {
     if (!gameStarted) {
-        $(".level-title").text("Level " + level);
+        $(".main-level-title").text("Level " + level);
         startNextLevel();
         gameStarted = true;
     }
@@ -34,7 +34,7 @@ function startNextLevel() {
     userClickedPattern = [];
     level++;
 
-    $(".level-title").text("Level " + level);
+    $(".main-level-title").text("Level " + level);
 
     addNextColorToSequence();
 
@@ -77,7 +77,7 @@ function animatePress(currentColor) {
 }
 
 function showGameOverScreen() {
-    $(".level-title").text("GAME OVER! Press Any Key To Restart.");
+    $(".main-level-title").text("GAME OVER! Press Any Key To Restart.");
     playSound("wrong");
     $("body").addClass("game-over");
     setTimeout(() => {

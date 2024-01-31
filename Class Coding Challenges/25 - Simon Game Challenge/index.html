@@ -9,8 +9,29 @@
 </head>
 
 <body>
-  <h1 class="level-title">Press A Key to Start</h1>
-  <div class="container">
+  <div class="start-view container body" >
+    <h1 class="level-title">
+      The Simon Game
+    </h1>
+    <h2>
+      Rules:
+    </h2>
+    <ul>
+      <li>The game will begin by playing a sound associated with a button.</li> 
+      <li>Match the sound sequence by clicking the button!</li>
+      <li>But be careful, with each level the sequence gets longer and longer!</li>
+      <li>How far can you go? Test your memory in... (*drumroll* ... *cymbal crash*!)</li>
+      <br />
+      The Simon Game!
+    </ul>
+    <div type="button" id="start" class="btn start-button">
+      Start The Game!
+    </div>
+  </div>
+  
+  <h1 id="main-level-title" class="level-title ">Press A Key to Start</h1>
+  
+  <div class="container game-view">
     <div class="row">
 
       <div type="button" id="green" class="btn green">
