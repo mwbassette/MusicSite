@@ -9,7 +9,7 @@ var level = 0;
 $(document).on("keydown", function() {
     if (!gameStarted) {
         $("#level-title").text("Level " + level);
-        processNextSequence();
+        startNextLevel();
         gameStarted = true;
     }
 });
@@ -24,7 +24,7 @@ $(".btn").on("click", function() {
 })
 
 //done
-function processNextSequence() {
+function startNextLevel() {
     userClickedPattern = [];
     level++
     $("#level-title").text("Level " + level);
@@ -41,7 +41,7 @@ function checkAnswer(currentAnswer) {
         if (gamePattern.length === userClickedPattern.length) {
             console.log("Good Job!");
             setTimeout(function() {
-                processNextSequence();
+                startNextLevel();
             }, 1000);
         }
     } else {
