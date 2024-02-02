@@ -13,7 +13,7 @@ div.start-view {
 
 div.rules-container {
   width: 90%;
-  text-align: left;
+  text-align: center;
   display: block;
   margin: 0px auto;
 }
@@ -22,11 +22,12 @@ ul {
   padding-left: 0;
   line-height: 1.5;
   list-style: none;
+  display: inline-block;
+  text-align: left;
 }
 
 div.rules-subtitle {
-  display: inline-block;
-  justify-content: left;
+  text-align: center;
 }
 
 .centered-list-item-small {
@@ -35,7 +36,7 @@ div.rules-subtitle {
 
 .centered-list-item-big {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 div.start-button {
