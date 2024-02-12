@@ -98,17 +98,33 @@ li a:hover {
     color: white;
 }
 
+section {
+    padding: 75px 0;
+    
+}
+
+.top-description {
+    width: 66%;
+    text-align: center;
+    margin: 0px auto;
+    max-width: 750px;
+}
+
+
+    
+
+
 hr {
-    color: #333;
+    color: #eee;
     margin: 20px auto;
     width: 80%;
     height: 0;
-    border: 1px solid #333;
+    border: 1px solid #eee;
     text-align: center;
 }
 
 .main-description {
-    font-size: 16px;
+    font-size: 21px;
     font-family: Helvetica Neue;
     font-weight: 300;
     text-align: center;
@@ -120,8 +136,10 @@ hr {
 
 .unusually-big-title-of-subsection {
     font-size: 40px;
+    font-weight: 500;
     font-family: PT Sans;
     text-align: center;
+    margin: 0 0 25px 0;
 }
 
 .three-step-grid {
@@ -135,11 +153,14 @@ hr {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .step-title {
     font-size: 24px;
     font-family: PT Sans;
+    font-weight: 500;
+    margin: 15px 0;
     text-align: center;
 }
 
@@ -148,6 +169,8 @@ hr {
     font-family: Helvetica Neue;
     color: #777;
     text-align: center;
+    margin: 0 0 10px;
+    line-height: 1.75;
 }
 
 .step img {
@@ -156,15 +179,16 @@ hr {
     margin-right: auto;
 }
 
-.divider {
-    padding: 75px 0;
+.center-it {
+    text-align: center;
 }
 
 .title-with-button-below {
     font-size: 30px;
+    font-weight: 500;
     font-family: PT Sans;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -175,9 +199,10 @@ hr {
     line-height: 1.3;
     font-size: 18px;
     padding: 10px 16px;
+    border: 1px solid transparent;
     border-radius: 6px;
-    margin: 10px auto;
-    display: flex;
+    margin: 20px 0 0 0;
+    display: inline-block;
     justify-content: center;
 }
 
