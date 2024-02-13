@@ -98,6 +98,12 @@ li a:hover {
     color: white;
 }
 
+.main-section-container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
 section {
     padding: 75px 0;
     
@@ -146,7 +152,6 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
-    width: 80%;
 }
 
 .step {
@@ -162,6 +167,7 @@ hr {
     font-weight: 500;
     margin: 15px 0;
     text-align: center;
+    line-height: 1.1;
 }
 
 .step-description {
