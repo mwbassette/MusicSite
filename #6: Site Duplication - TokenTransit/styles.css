@@ -37,7 +37,7 @@ li a:hover {
     color: rgb(108, 159, 255);
 }
 
-.picture-section {
+.picture-container {
     text-align: center;
     height: 790px;
     margin-top: 50px;
@@ -97,7 +97,7 @@ li a:hover {
     color: white;
 }
 
-.main-section-container {
+.main-content-container {
     max-width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
@@ -115,10 +115,6 @@ section {
     max-width: 750px;
 }
 
-
-    
-
-
 hr {
     color: #eee;
     margin: 20px auto;
@@ -128,6 +124,14 @@ hr {
     border-right: 0;
     border-bottom: 0;
     text-align: center;
+}
+
+hr::before {
+    clear: both;
+}
+
+hr::after {
+    clear: both;
 }
 
 .main-description {
@@ -217,16 +221,29 @@ hr {
     text-align: left;
 }
 
-.footer-container {
-    padding: 0 15px;
-    margin: 0 auto;
+footer {
+    text-align: center;
+    padding: 25px 0;
 }
 
-.big-footer-row {
+.footer-row {
     margin: 0 -15px;
+    box-sizing: border-box;
 }
 
-.link-column {
+.footer-row::before {
+    clear: both;
+    display: table;
+    content: " ";
+}
+
+.footer-row::after {
+    clear: both;
+    display: table;
+    content: " ";
+}
+
+.footer-link-column {
     position: relative;
     min-height: 1px;
     padding-right: 15px;
@@ -236,6 +253,20 @@ hr {
     color: #333;
 }
 
+h5 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #207aa9;
+    text-decoration: none;
+    background-color: transparent;
+}
+
 ul {
     font-size: 14px;
     line-height: 1.75;
@@ -243,16 +274,69 @@ ul {
     margin-bottom: 10px;
 }
 
+li {
+
+}
+
 .unstyled-list {
     list-style: none;
     padding-left: 0;
 }
 
-.small-footer-row {
-
+.copyright-info {
+    color: #333;
+    font-size: 14px;
+    line-height: 40px;
 }
 
-footer {
-    text-align: center;
-    padding: 25px 0;
+.social-media-buttons {
+    margin-bottom: 0;
+}
+
+.inline-list {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+}
+
+.social-media-buttons > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.fa-facebook::before {
+    content: "\f09a";
+}
+
+.fa-twitter::before {
+    content: "\f099";
+}
+
+ul.social-media-buttons li a {
+    color: white;
+    display: block;
+    background-color: #222;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+    outline: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+ul.social-media-buttons li a:hover {
+    background-color: #2899d4;
 }
