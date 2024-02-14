@@ -51,7 +51,6 @@ li a:hover {
 
 .header-image {
     background-size: cover;
-    
     width: 100%;
     height: 790px;
 }
@@ -123,9 +122,11 @@ section {
 hr {
     color: #eee;
     margin: 20px auto;
-    width: 80%;
     height: 0;
-    border: 1px solid #eee;
+    border-top: 1px solid #eee;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
     text-align: center;
 }
 
@@ -212,12 +213,46 @@ hr {
     justify-content: center;
 }
 
-.link-grid {
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto;
+.left-it {
+    text-align: left;
+}
+
+.footer-container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.big-footer-row {
+    margin: 0 -15px;
+}
+
+.link-column {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 25%;
+    color: #333;
+}
+
+ul {
+    font-size: 14px;
+    line-height: 1.75;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.unstyled-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.small-footer-row {
+
 }
 
 footer {
     text-align: center;
+    padding: 25px 0;
 }
