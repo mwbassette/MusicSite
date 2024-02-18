@@ -68,7 +68,7 @@
 
 .nav-list {
     float: right;
-    margin-right: 0 -15px 0 0;
+    margin-bottom: 0;
     list-style: none;
     font-size: 14px;
     line-height: 1.75;
@@ -344,7 +344,7 @@ a {
     background-color: transparent;
 }
 
-ul {
+footer ul {
     font-size: 14px;
     line-height: 1.75;
     margin-top: 0;
