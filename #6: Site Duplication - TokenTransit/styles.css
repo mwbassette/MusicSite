@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: PT Sans, Helvetica Neue, Helvetica;
+    font-family: PT Sans, "Helvetica Neue", Helvetica;
     box-sizing: border-box;
 }
 
@@ -98,19 +98,12 @@
     color: #2899d4;
 }
 
-/* .list-item {
-    color: white;
-    text-decoration: none;
-    list-style: none;
-    font-weight: 600;
-    display: inline-block;
-    padding: 15px;
-}
-*/
-
-
 li a:hover {
     color: rgb(108, 159, 255);
+}
+
+.mobile-only-nav-button-container {
+    display: none;
 }
 
 .picture-container {
@@ -133,7 +126,7 @@ li a:hover {
 
 .small-title {
     font-size: 22px;
-    font-family: Helvetica Neue, Helvetica;
+    font-family: "Helvetica Neue", Helvetica;
     font-style: italic;
     color: white;
     font-size: 40px;
@@ -254,7 +247,7 @@ hr::after {
 
 .step-description {
     font-size: 14px;
-    font-family: Helvetica Neue;
+    font-family: "Helvetica Neue";
     color: #777;
     text-align: center;
     margin: 0 0 10px;
@@ -434,20 +427,29 @@ iframe {
     right: 0px;
 }
 
+*/
+
+.support-button-container {
+    float: right;
+    margin: 10px 20px;
+    position: relative;
+}
+
 .floating-support-button {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
     background-color: #2899d4;
     color: #ffffff;
     fill: #ffffff;
-    padding: .92857rem 1.57143rem;
+    padding: 13px 22px;
     border-radius: 999rem;
     border: none;
-    bottom: 0;
     letter-spacing: 0.6;
     font-size: 1.07143rem;
     font-weight: 700;
     box-sizing: border-box;
     margin: 0;
-    min-width: 100%;
     max-width: 100%;
     white-space: nowrap;
     text-align: left;
@@ -458,23 +460,137 @@ iframe {
     font: inherit;
 }
 
-.support-button-container {
+.svg-container {
     vertical-align: middle;
-    padding-right: 0 .57143rem 0 0;
+    padding-right: 8px;
     color: inherit;
     display: inline-block;
     max-width: 100%;
+    font-family: system-ui, "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    font-feature-settings: "kern";
+    font-kerning: normal;
+    font-weight: 700;
+    letter-spacing: 0.6px;
 }
 
-.svg-stuff {
-    min-width: 1.42857rem;
-    max-height: 100%;
-    min-height: 1.42857rem;
-    height: 1.42857rem;
-    width: 1.42857rem;
+.svg-span {
     overflow: hidden;
     color: #ffffff;
     fill: #ffffff;    
+    font-size: 15px;
 }
 
-*/
+.support-span {
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    font-size: 15px;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: system-ui, "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", Arial, sans-serif;
+
+}
+
+
+@media (max-width: 767px) {
+    #navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: 3.15px solid transparent;
+    }
+    .navbar-token-transit-title {
+        font-size: 18px;
+    }
+    .nav-list li {
+        display: none;
+    }
+    .mobile-only-nav-button-container {
+        display: block;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .mobile-only-nav-button {
+        background-color: transparent;
+        font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        text-transform: uppercase;
+        color: #2899d4;
+        font-size: 16px;
+        position: relative;
+        float: right;
+        padding: 9px 10px;
+        margin-right: 15px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        appearance: button;
+        font-weight: 400;
+        line-height: 17.15px;
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    .fa-nav::before {
+        content: "\f0c9";
+    }
+    .fa-nav {
+        font-size: 1.33333333em;
+        line-height: .75em;
+        content: "\f0c9";
+    }
+    .picture-container {
+        padding: 0 15px;
+        margin: 0;
+        height: auto;
+    }
+    .picture-section-text-wrapper {
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+    .small-title {
+        font-size: 22px;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+    .big-title {
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 50px;
+        margin-bottom: 25px;
+    }
+    .big-blue-button {
+        font-size: 18px;
+        border: 1px solid transparent;
+    }
+    
+    
+
+    section {
+        padding: 30px 0;
+    }
+    .main-content-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .top-description {
+        width: auto;
+    }
+    .main-description {
+        font-size: 16px;
+    }
+    .unusually-big-title-of-subsection {
+        line-height: 44px;
+    }
+    .title-with-button-below {
+        line-height: 33px;
+    }
+    footer a {
+        font-family: Helvetica;
+    }
+    .footer-link-column {
+        width: 100%;
+    }
+}
