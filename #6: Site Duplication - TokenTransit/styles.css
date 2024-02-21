@@ -407,28 +407,6 @@ ul.social-media-buttons li a:hover {
     background-color: #2899d4;
 }
 
-/*
-
-iframe {
-    color-scheme: light;
-    width: 132px;
-    height: 50px;
-    padding: 0px;
-    margin: 10px 20px;
-    position: fixed;
-    bottom: 0px;
-    overflow: visible;
-    opacity: 1;
-    border: 0px;
-    z-index: 999998;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition-property: opacity, top, bottom;
-    right: 0px;
-}
-
-*/
-
 .support-button-container {
     float: right;
     margin: 10px 20px;
@@ -441,23 +419,18 @@ iframe {
     right: 20px;
     background-color: #2899d4;
     color: #ffffff;
-    fill: #ffffff;
     padding: 13px 22px;
     border-radius: 999rem;
     border: none;
     letter-spacing: 0.6;
-    font-size: 1.07143rem;
     font-weight: 700;
-    box-sizing: border-box;
-    margin: 0;
-    max-width: 100%;
-    white-space: nowrap;
-    text-align: left;
     cursor: pointer;
     display: inline-block;
-    text-transform: none;
     overflow: visible;
-    font: inherit;
+}
+
+.floating-support-button:hover {
+    background-color: #217eb0;
 }
 
 .svg-container {
@@ -467,7 +440,7 @@ iframe {
     display: inline-block;
     max-width: 100%;
     font-family: system-ui, "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", Arial, sans-serif;
-    font-size: 15px;
+    font-size: 0px;
     font-feature-settings: "kern";
     font-kerning: normal;
     font-weight: 700;
@@ -482,6 +455,7 @@ iframe {
 }
 
 .support-span {
+    margin-left: -3px;
     font-weight: 700;
     letter-spacing: 0.6px;
     font-size: 15px;
