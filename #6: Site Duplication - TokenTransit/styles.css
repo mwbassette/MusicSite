@@ -510,7 +510,7 @@ ul.social-media-buttons li a:hover {
     }
     .fa-nav {
         font-size: 1.33333333em;
-        line-height: .75em;
+        line-height: 12px;
         content: "\f0c9";
     }
     .picture-container {
