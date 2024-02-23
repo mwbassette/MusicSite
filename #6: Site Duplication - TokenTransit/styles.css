@@ -499,7 +499,7 @@ ul.social-media-buttons li a:hover {
         appearance: button;
         font-weight: 400;
         line-height: 17.15px;
-        overflow: visible
+        overflow: visible;
     }
     .fa-nav::before {
         content: "\f0c9";
