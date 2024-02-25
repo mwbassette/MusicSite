@@ -431,6 +431,7 @@ ul.social-media-buttons li a:hover {
 
 .floating-support-button:hover {
     background-color: #217eb0;
+    transition: background-color 300ms;
 }
 
 .svg-container {
