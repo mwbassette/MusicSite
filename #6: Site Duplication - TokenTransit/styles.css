@@ -569,6 +569,7 @@ ul.social-media-buttons li a:hover {
     }
     .svg-container {
         padding-right: 0px;
+        height: 20px;
     }
     .hide-for-mobile {
         display: none;
