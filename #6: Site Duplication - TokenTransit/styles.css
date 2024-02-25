@@ -586,4 +586,13 @@ ul.social-media-buttons li a:hover {
     .footer-link-column {
         width: 100%;
     }
+    .hide-on-mobile {
+        display: none;
+    }
 }
+@media (min-width: 768px) {
+    .hide-on-desktop {
+        display: none;
+    }
+}
+
