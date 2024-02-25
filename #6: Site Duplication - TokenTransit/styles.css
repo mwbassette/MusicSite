@@ -569,6 +569,14 @@ ul.social-media-buttons li a:hover {
         max-width: 100%;
         height: auto;
     }
+    .mobile-three-step-image-row {
+        width: 83.33%;
+        margin-left: 8.33%;
+    }
+    .mobile-three-step-image-row img {
+        max-width: 100%;
+        height: auto;
+    }
     .title-with-button-below {
         line-height: 33px;
     }
