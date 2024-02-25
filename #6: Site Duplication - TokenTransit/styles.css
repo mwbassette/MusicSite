@@ -567,4 +567,13 @@ ul.social-media-buttons li a:hover {
     .footer-link-column {
         width: 100%;
     }
+    .floating-support-button {
+        padding: 14px;
+    }
+    .svg-container {
+        padding-right: 0px;
+    }
+    .hide-for-mobile {
+        display: none;
+    }
 }
