@@ -469,6 +469,7 @@ ul.social-media-buttons li a:hover {
         padding-top: 0;
         padding-bottom: 0;
         border-bottom: 3.15px solid transparent;
+        z-index: 1;
     }
     .navbar-token-transit-title {
         font-size: 18px;
