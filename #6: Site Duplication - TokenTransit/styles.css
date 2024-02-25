@@ -463,11 +463,7 @@ ul.social-media-buttons li a:hover {
 
 }
 
-
 @media (max-width: 767px) {
-    .hide-on-mobile {
-        display: none;
-    }
     #navbar {
         padding-top: 0;
         padding-bottom: 0;
