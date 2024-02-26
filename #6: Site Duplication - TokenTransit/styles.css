@@ -436,6 +436,7 @@ ul.social-media-buttons li a:hover {
 
 .svg-container {
     vertical-align: middle;
+    font-size: 0px;
     padding-right: 8px;
     color: inherit;
     display: inline-block;
