@@ -567,10 +567,10 @@ ul.social-media-buttons li a:hover {
     }
     .floating-support-button {
         padding: 14px;
+        font-family: system-ui;
     }
     .svg-container {
         padding-right: 0px;
-        height: 20px;
     }
     .hide-for-mobile {
         display: none;
