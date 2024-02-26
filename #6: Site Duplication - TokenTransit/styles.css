@@ -592,8 +592,15 @@ ul.social-media-buttons li a:hover {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    #navbar {
+        background-color: transparent;
+    }
     .main-content-container {
         width: 750px;
+    }
+    .picture-container {
+        margin-top: none;     
+        /* note: margin-top property should be eliminated on all versions*/
     }
 
     .hide-on-tablet {
