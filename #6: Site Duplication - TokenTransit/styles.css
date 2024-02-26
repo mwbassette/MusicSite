@@ -592,7 +592,9 @@ ul.social-media-buttons li a:hover {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+    .main-content-container {
+        width: 750px;
+    }
 
     .hide-on-tablet {
         display: none;
