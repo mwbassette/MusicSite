@@ -599,7 +599,7 @@ ul.social-media-buttons li a:hover {
         width: 750px;
     }
     .picture-container {
-        margin-top: none;     
+        margin-top: 0px;     
         /* note: margin-top property should be eliminated on all versions*/
     }
 
