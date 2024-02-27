@@ -600,7 +600,7 @@ ul.social-media-buttons li a:hover {
     }
     .picture-container {
         margin-top: 0px;     
-        /* note: margin-top property should be eliminated on all versions*/
+        /* note: margin-top property should be eliminated on all versions for this class*/
     }
 
     .hide-on-tablet {
