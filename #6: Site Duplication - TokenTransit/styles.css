@@ -598,6 +598,10 @@ ul.social-media-buttons li a:hover {
     .main-content-container {
         width: 750px;
     }
+    .top-description {
+        width: 625px;
+        /*alternatively, width is 83.3%*/
+    }
     .picture-container {
         margin-top: 0px;     
         /* note: margin-top property should be eliminated on all versions for this class*/
