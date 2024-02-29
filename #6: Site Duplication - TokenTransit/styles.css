@@ -529,7 +529,6 @@ ul.social-media-buttons li a:hover {
         font-size: 18px;
         border: 1px solid transparent;
     }
-    
     section {
         padding: 30px 0;
     }
@@ -591,7 +590,31 @@ ul.social-media-buttons li a:hover {
         display: none;
     }
 }
-@media (min-width: 768px) {
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #navbar {
+        background-color: transparent;
+    }
+    .main-content-container {
+        width: 750px;
+    }
+    .top-description {
+        width: 625px;
+        /*alternatively, width is 83.3%*/
+    }
+    .picture-container {
+        margin-top: 0px;     
+        /* note: margin-top property should be eliminated on all versions for this class*/
+    }
+
+    .hide-on-tablet {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) {
+    
+    
     .hide-on-desktop {
         display: none;
     }
