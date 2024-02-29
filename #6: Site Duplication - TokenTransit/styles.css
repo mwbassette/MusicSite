@@ -148,6 +148,9 @@ li a:hover {
     border-color: rgb(40, 158, 236);
     background-color: rgb(40, 158, 236);
     border-radius: 3px;
+    font-size: 18px;
+    line-height: 25.7167px;
+    border: 1px solid transparent;
 }
 
 .big-blue-button:hover {
