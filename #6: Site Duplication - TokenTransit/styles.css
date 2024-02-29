@@ -154,7 +154,8 @@ li a:hover {
 }
 
 .big-blue-button:hover {
-    background-color: rgb(89, 156, 201);
+    background-color: #207aa9;
+    border-color: #1e74a1;
 }
 
 .blue-button-subtitle {
