@@ -1,9 +1,12 @@
-window.onscroll = function() {setNavbarBackground()};
- 
+window.addEventListener('scroll', setNavbarBackground);
+
 function setNavbarBackground() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    document.getElementById("navbar").style.background = "#222";
-  } else {
-    document.getElementById("navbar").style.background = "transparent";
-  }
+  const hasUserScrolledDown = document.body.scrollTop > 10 || document.documentElement.scrollTop > 10;
+  let navbar = document.getElementById("navbar");
+  navbar.style.background = hasUserScrolledDown ? "#222" : "transparent";
 }
+
+
+
+
+
