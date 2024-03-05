@@ -69,24 +69,36 @@ nav a:hover {
     background-position: center center;
 }
 #image-gallery {
-
 }
-#image-gallery > section{
+#image-gallery section {
     font-size: 24px;
-    text-decoration: underline;
+    align-items: center;
+    font-weight: 700;
+}
+#image-gallery hr {
+    margin: 10px auto;
+    max-width: 83.3%;
+    filter: blur(3px);
 }
 .gallery-box {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     gap: 10px;
+    background-color: #1a1413;
+    max-width: 83.3%;
+    margin: 0 auto;
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: khaki;
 }
 .gallery-box img {
     flex-basis: 300px;
     object-fit: cover;
     overflow: auto;
-    
 }
 .fa {
     display: inline-block;
