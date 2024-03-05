@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 #navbar {
     display: block;
     position: fixed;
@@ -12,7 +11,7 @@
     right: 0;
     width: 100%;
     min-height: 50px;
-    padding: 10px 5px;
+    padding: 5px;
     background-color: black;
 }
 nav a {
@@ -27,6 +26,9 @@ nav a {
 nav a:hover {
     color: khaki;
 }
+.nav-title-container {
+    float: left;
+}
 .nav-title {
     cursor: default;
     pointer-events: none;
@@ -35,11 +37,6 @@ nav a:hover {
 .nav-signature-title {
     font-family: "Shadows Into Light", cursive;
     font-size: 20px;
-}
-
-
-.nav-title-container {
-    float: left;
 }
 .nav-link-list-container {
     
@@ -55,8 +52,6 @@ nav a:hover {
     list-style: none;
     padding-left: 0px;
 }
-
-
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -79,12 +74,14 @@ nav a:hover {
     }
     
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
     
     .hide-on-tablet {
         display: none;
     }
 }
+
 @media (min-width: 1025px) {
 
     .hide-on-desktop {
