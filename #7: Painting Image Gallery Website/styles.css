@@ -12,11 +12,51 @@
     right: 0;
     width: 100%;
     min-height: 50px;
+    padding: 10px 5px;
     background-color: black;
+}
+nav a {
+    display: inline-block;
+    vertical-align: middle;
     color: white;
+    text-decoration: none;
+    padding: 15px;
+    line-height: 20px;
+    font-weight: 400;
+}
+nav a:hover {
+    color: khaki;
+}
+.nav-title {
+    cursor: default;
+    pointer-events: none;
+    padding-right: 0px;
+}
 .nav-signature-title {
     font-family: "Shadows Into Light", cursive;
+    font-size: 20px;
 }
+
+
+.nav-title-container {
+    float: left;
+}
+.nav-link-list-container {
+    
+}
+.nav-list {
+    float: right;
+    letter-spacing: 1px;
+}
+.list-item {
+    float: left;
+}
+.unstyled-list {
+    list-style: none;
+    padding-left: 0px;
+}
+
+
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
