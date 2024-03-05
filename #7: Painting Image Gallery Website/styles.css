@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
     color: white;
+    scroll-behavior: smooth;
+}
+body {
+    padding-top: 60px;
 }
 #navbar {
     display: block;
@@ -51,7 +55,7 @@ nav a:hover {
     padding-left: 0px;
 }
 #bio {
-    margin-top: 60px;
+    
 }
 .background-image-container {
     background-color: #1a1413;
