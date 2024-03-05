@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 #navbar {
     display: block;
     position: fixed;
@@ -9,21 +15,37 @@
     background-color: black;
     color: white;
 }
-@media (max-width: 767px) {
-.hide-on-mobile {
-    display: none;
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    font-size: inherit;
+    text-rendering: auto;
 }
+
+@media (max-width: 767px) {
+    .fa-nav::before {
+        content: "\f0c9";
+    }
+    .fa-nav {
+        font-size: 1.33333333em;
+        line-height: 12px;
+        content: "\f0c9";
+    }
+    .hide-on-mobile {
+        display: none;
+    }
     
 }
 @media (min-width: 768px) and (max-width: 1024px) {
     
-.hide-on-tablet {
-    display: none;
-}
+    .hide-on-tablet {
+        display: none;
+    }
 }
 @media (min-width: 1025px) {
 
-.hide-on-desktop {
-    display: none;
-}
+    .hide-on-desktop {
+        display: none;
+    }
 }
