@@ -50,6 +50,9 @@ nav a:hover {
     list-style: none;
     padding-left: 0px;
 }
+#bio {
+    margin-top: 60px;
+}
 .background-image-container {
     background-color: #1a1413;
     background-image: url("background4.jpg");
@@ -61,8 +64,25 @@ nav a:hover {
     z-index: -1;
     background-position: center center;
 }
-.gallery-box {
+#image-gallery {
 
+}
+#image-gallery > section{
+    font-size: 24px;
+    text-decoration: underline;
+}
+.gallery-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.gallery-box img {
+    flex-basis: 300px;
+    object-fit: cover;
+    overflow: auto;
+    
 }
 .fa {
     display: inline-block;
