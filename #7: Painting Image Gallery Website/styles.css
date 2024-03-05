@@ -39,9 +39,6 @@ nav a:hover {
     font-family: "Shadows Into Light", cursive;
     font-size: 20px;
 }
-.nav-link-list-container {
-    
-}
 .nav-list {
     float: right;
     letter-spacing: 1px;
@@ -52,6 +49,20 @@ nav a:hover {
 .unstyled-list {
     list-style: none;
     padding-left: 0px;
+}
+.background-image-container {
+    background-color: #1a1413;
+    background-image: url("background4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-position: center center;
+}
+.gallery-box {
+
 }
 .fa {
     display: inline-block;
