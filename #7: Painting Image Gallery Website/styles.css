@@ -130,6 +130,66 @@ nav a:hover {
     font-size: 20px;
     text-align: center;
 }
+#div-box-art {
+    height: 600px;
+    width: 600px;
+    margin: 20px auto 10px;
+}
+#div-box-art *:hover {
+    background-color:#1a1413;
+}
+.large-box {
+    background-color: khaki;
+    height: 200px;
+    padding: 20px;
+}
+.medium-box {
+    background-color: teal;
+    height: 80px;
+    width: 80px;
+    margin: 5px auto;
+    border-radius: 25%;
+    z-index: 2;
+    position: relative;
+}
+.small-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    z-index: 3;
+}
+.small-box:first-child {
+    background-color: darkred;
+    bottom: 40px;
+    right: 250px;
+}
+.small-box:nth-child(2) {
+    background-color: aquamarine;
+    right: 100px;
+    top: 10px;
+    transform: rotate(45deg);
+    border-radius: 50% 20% / 10% 40%;
+}
+.small-box:nth-child(3) {
+    background-color: salmon;
+    left: 100px;
+    bottom: 10px;
+    transform: rotate(-20deg);
+}
+.small-box:last-child {
+    background-color: green;
+    left: 250px;
+    top: 40px;
+}
+/* .hide-until-click {
+    display: none;
+} */
+.show-on-click {
+    display: block;
+}
 @media (max-width: 302px) {
     .nav-title {
         display: none;
