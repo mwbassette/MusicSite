@@ -125,7 +125,12 @@ nav a:hover {
     object-fit: cover;
     overflow: auto;
 }
-
+#contact {
+    background-color: #1a1413;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
 @media (max-width: 302px) {
     .nav-title {
         display: none;
