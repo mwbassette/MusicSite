@@ -28,7 +28,8 @@ body {
     left: 0;
     right: 0;
     width: 100%;
-    min-height: 50px;
+    min-height: 60px;
+    max-height: 60px;
     padding: 5px;
     background-color: #1a1413;
     z-index: 3;
