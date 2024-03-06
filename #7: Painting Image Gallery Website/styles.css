@@ -90,7 +90,7 @@ nav a:hover {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
-    max-width: 90%;
+    max-width: 85%;
     margin: 0 auto;
     text-align: center;
     font-size: 30px;
@@ -118,7 +118,7 @@ nav a:hover {
     gap: 10px;
     background-color: #1a1413;
     max-width: 100%;
-    margin: 5px auto 0px;
+    margin: 5px auto 25px;
     padding: 15px;
     border: 1px solid;
     border-radius: 10px;
