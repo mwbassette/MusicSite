@@ -106,9 +106,8 @@ nav a:hover {
 }
 .gallery-box {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
     gap: 10px;
     background-color: #1a1413;
@@ -120,8 +119,8 @@ nav a:hover {
     border-color: khaki;
     text-align: center;
 }
-.gallery-box img {
-    flex: 1 1 32%;
+.gallery-box > * {
+    flex: 0 1 32%;
     object-fit: cover;
     overflow: auto;
 }
@@ -134,6 +133,11 @@ nav a:hover {
 @media (max-width: 302px) {
     .nav-title {
         display: none;
+    }
+    .gallery-box > * {
+        flex: 0 1 100%;
+        object-fit: cover;
+        overflow: auto;
     }
 }
 
@@ -167,6 +171,11 @@ nav a:hover {
     .fa::before {
         content: "\f0c9";
     }
+    .gallery-box > * {
+        flex: 0 1 100%;
+        object-fit: cover;
+        overflow: auto;
+    }
     .hide-on-mobile {
         display: none;
     }
@@ -174,7 +183,11 @@ nav a:hover {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    
+    .gallery-box > * {
+        flex: 0 1 49%;
+        object-fit: cover;
+        overflow: auto;
+    }
     .hide-on-tablet {
         display: none;
     }
