@@ -104,11 +104,6 @@ nav a:hover {
     align-items: center;
     font-weight: 700;
 }
-#image-gallery hr {
-    margin: 10px auto;
-    max-width: 83.3%;
-    filter: blur(3px);
-}
 .gallery-box {
     display: flex;
     flex-direction: row;
