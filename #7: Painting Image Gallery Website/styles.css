@@ -5,8 +5,21 @@
     color: white;
     scroll-behavior: smooth;
 }
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-padding-top: 60px;
+}
 body {
-    padding-top: 60px;
+    margin-top: 60px;
 }
 #navbar {
     display: block;
