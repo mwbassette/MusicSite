@@ -139,12 +139,33 @@ nav a:hover {
 }
 
 @media (max-width: 767px) {
-    .fa-nav::before {
-        content: "\f0c9";
+    .mobile-only-nav-button-container *{
+        display: block;
+        float: right;
+        font-size: 20px;
     }
-    .fa-nav {
-        font-size: 1.33333333em;
-        line-height: 12px;
+    #force-fa-size {
+        line-height: 17.15px;
+    }
+    .mobile-only-nav-button {
+        background-color: transparent;
+        position: relative;
+        padding: 15px;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        appearance: button;
+        font-weight: 400;
+        overflow: visible;
+    }
+    .fa {
+        display: inline-block;
+        font: normal normal normal 20px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        line-height: 17.15px;
+    }
+    .fa::before {
         content: "\f0c9";
     }
     .hide-on-mobile {
