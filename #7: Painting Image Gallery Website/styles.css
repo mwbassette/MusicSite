@@ -130,12 +130,11 @@ nav a:hover {
     object-fit: cover;
     overflow: auto;
 }
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 14px;
-    font-size: inherit;
-    text-rendering: auto;
+
+@media (max-width: 302px) {
+    .nav-title {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
