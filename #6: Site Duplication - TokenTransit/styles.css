@@ -39,7 +39,6 @@
     height: 50px;
     padding: 15px 15px;
     line-height: 20px;
-
 }
 
 .navbar-token-transit-title:hover {
@@ -551,21 +550,6 @@ ul.social-media-buttons li a:hover {
     .unusually-big-title-of-subsection {
         line-height: 44px;
     }
-    /*
-    .three-step-grid {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: none;
-    }
-    .step {
-        display: grid;
-        grid-template-rows: 1fr;
-    }
-    .step img {
-        max-width: 100%;
-        height: auto;
-    }
-    */
     .mobile-three-step-image-row {
         width: 83.33%;
         margin-left: 8.33%;
@@ -604,7 +588,6 @@ ul.social-media-buttons li a:hover {
     }
     .top-description {
         width: 625px;
-        /*alternatively, width is 83.3%*/
     }
     .hide-on-tablet {
         display: none;
