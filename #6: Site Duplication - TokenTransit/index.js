@@ -14,12 +14,20 @@ function setNavbarBackground() {
 
 const mobileNav = document.querySelector('.mobile-nav-button')
 mobileNav.addEventListener('click', displayMobileNavbarLinks);
+mobileNav.addEventListener('click', changeMobileButtonBackgroundColor);
 
 function displayMobileNavbarLinks() {
     const links = document.querySelectorAll('.mobile-list-item');
     links.forEach(li => li.classList.toggle('js-show-mobile-nav-links'));
 }
-  
+
+// the function below actually still doesn't match the official site since
+// when you click that site's button the color stays even after you collapse
+// the list
+function changeMobileButtonBackgroundColor() {
+    mobileNav.classList.toggle('active-background');
+}
+
 
 
 
