@@ -24,3 +24,19 @@ function displayMobileNavbarLinks() {
 
 
 
+
+
+
+// Below could be a cleaner version of the top code
+
+
+// const fdsafdsa = document.querySelector('.mobile-nav-button');
+// fdsafdsa.addEventListener('click', runTestFunction);
+
+// function runTestFunction() {
+//   const navList = document.querySelector('.mobile-nav-list');
+//   navList.classList.toggle('expand-nav');
+// }
+
+
+
