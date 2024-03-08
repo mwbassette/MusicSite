@@ -127,12 +127,19 @@ nav a:hover {
     font-size: 20px;
     text-align: center;
 }
-#div-box-art {
+
+.div-box-art-container {
     height: 600px;
     width: 600px;
     margin: 20px auto 10px;
 }
-#div-box-art *:hover {
+.js-hide {
+    display: none;
+}
+.div-box-art-container.js-expand {
+    display: block;
+}
+.div-box-art-container *:hover {
     background-color:#1a1413;
 }
 .large-box {
@@ -181,12 +188,7 @@ nav a:hover {
     left: 250px;
     top: 40px;
 }
-/* .hide-until-click {
-    display: none;
-} */
-.show-on-click {
-    display: block;
-}
+
 @media (max-width: 302px) {
     .nav-title {
         display: none;
@@ -236,7 +238,6 @@ nav a:hover {
     .hide-on-mobile {
         display: none;
     }
-    
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
