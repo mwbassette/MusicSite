@@ -13,9 +13,10 @@
     left: 0;
     right: 0;
     width: 100%;
-    background-color: #222;
+    background-color: transparent;
     padding: 10px 0;
     transition: padding .3s;
+    transition: background-color 0.3s;
     border: none;
     border-radius: 0;
     min-height: 50px;
@@ -38,7 +39,6 @@
     height: 50px;
     padding: 15px 15px;
     line-height: 20px;
-
 }
 
 .navbar-token-transit-title:hover {
@@ -102,7 +102,7 @@ li a:hover {
     color: rgb(108, 159, 255);
 }
 
-.mobile-only-nav-button-container {
+.mobile-nav-button-container {
     display: none;
 }
 
@@ -464,6 +464,7 @@ ul.social-media-buttons li a:hover {
 
 @media (max-width: 767px) {
     #navbar {
+        background-color: #222;
         padding-top: 0;
         padding-bottom: 0;
         border-bottom: 3.15px solid transparent;
@@ -472,15 +473,12 @@ ul.social-media-buttons li a:hover {
     .navbar-token-transit-title {
         font-size: 18px;
     }
-    .nav-list li {
-        display: none;
-    }
-    .mobile-only-nav-button-container {
+    .mobile-nav-button-container {
         display: block;
         margin-left: -15px;
         margin-right: -15px;
     }
-    .mobile-only-nav-button {
+    .mobile-nav-button {
         background-color: transparent;
         font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
         text-transform: uppercase;
@@ -499,6 +497,42 @@ ul.social-media-buttons li a:hover {
         font-weight: 400;
         line-height: 17.15px;
         overflow: visible;
+    }
+    .mobile-nav-button:hover {
+        background-color: #2899d4;
+        color: #222;  
+    }
+    /* Below is not what I'd prefer to do, but it matches the site */
+    .mobile-nav-button.active-background {
+        background-color: #2899d4;
+        color: #222;  
+    }
+    /* :] */
+    .mobile-nav-list .mobile-list-item {
+        display: none;
+    }
+    .mobile-list-item.js-show-mobile-nav-links {
+        float: none;
+        text-align: center;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 15px;
+    }
+    .mobile-list-item.js-show-mobile-nav-links a {
+        color: white;
+        font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 20px;
+    }
+    .mobile-list-item.js-show-mobile-nav-links:first-of-type {
+        padding-top: 18px;
+        border-top: 1px solid rgba(255,255,255,.2);
+    }
+    .mobile-list-item.js-show-mobile-nav-links:last-of-type {
+        margin-bottom: 8px;
     }
     .fa-nav::before {
         content: "\f0c9";
@@ -550,21 +584,6 @@ ul.social-media-buttons li a:hover {
     .unusually-big-title-of-subsection {
         line-height: 44px;
     }
-    /*
-    .three-step-grid {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: none;
-    }
-    .step {
-        display: grid;
-        grid-template-rows: 1fr;
-    }
-    .step img {
-        max-width: 100%;
-        height: auto;
-    }
-    */
     .mobile-three-step-image-row {
         width: 83.33%;
         margin-left: 8.33%;
@@ -603,7 +622,6 @@ ul.social-media-buttons li a:hover {
     }
     .top-description {
         width: 625px;
-        /*alternatively, width is 83.3%*/
     }
     .hide-on-tablet {
         display: none;
@@ -611,8 +629,6 @@ ul.social-media-buttons li a:hover {
 }
 
 @media (min-width: 1025px) {
-    
-    
     .hide-on-desktop {
         display: none;
     }
