@@ -4,11 +4,9 @@ const clearButton = document.querySelector(".clear");
 const equalButton = document.querySelector(".equal");
 const display = document.querySelector(".display-area");
 
-
 let currentNumber = '';
 let previousNumber = '';
 let operation = null;
-
 
 numberButtons.forEach(numBtn => {
     numBtn.addEventListener('click', () => {
@@ -22,7 +20,20 @@ operatorButtons.forEach(oprBtn => {
 })
 clearButton.addEventListener('click', clearDisplay);
 equalButton.addEventListener('click', calculate);
-
+document.addEventListener('keydown', (e) => {
+    if (isFinite(e.key)) {
+        appendNumber(e.key);
+    } else if (previousNumber !== '') {
+        calculate()
+    } else if (e.key = "Backspace" || "c") {
+        clearDisplay();
+    } else if (e.key = "Enter") {
+        calculate();
+    } else {
+        clearDisplay();
+        showErrorMessage();
+    }
+})
 
 display.innerText = randomGreeting();
 
@@ -71,6 +82,9 @@ function clearDisplay() {
     display.innerText = '';
     currentNumber = '';
     previousNumber = '';
+}
+function showErrorMessage() {
+    display.innerText = 'Error, NaN'
 }
 function updateDisplay() {
     display.innerText = currentNumber;
