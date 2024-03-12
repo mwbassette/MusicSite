@@ -28,7 +28,9 @@ function appendNumber(newNum) {
 
 
 function clearDisplay() {
-    display.textContent = "";
+    display.textContent = '';
+    currentNumber = '';
+    previousNumber = '';
 }
 function updateDisplay() {
 
