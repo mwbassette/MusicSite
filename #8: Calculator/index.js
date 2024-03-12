@@ -4,9 +4,11 @@ const clearButton = document.querySelector(".clear");
 const equalButton = document.querySelector(".equal");
 const display = document.querySelector(".display-area");
 
+
 let currentNumber = '';
 let previousNumber = '';
 let operation = null;
+
 
 numberButtons.forEach(numBtn => {
     numBtn.addEventListener('click', () => {
@@ -21,11 +23,13 @@ operatorButtons.forEach(oprBtn => {
 clearButton.addEventListener('click', clearDisplay);
 equalButton.addEventListener('click', calculate);
 
+
 display.innerText = randomGreeting();
+
 
 function appendNumber(newNum) {
     currentNumber = currentNumber.toString() + newNum.toString();
-    display.innerText = currentNumber;
+    updateDisplay();
     limitNumberCount();
 }
 function handleSelectedOperation(selectedOperation) {
@@ -90,9 +94,3 @@ function randomGreeting() {
     var ranNum = Math.floor(Math.random() * 8);
     return greetingMessages[ranNum];
 }
-
-
-
-// IDEA: RNG greeting text upon refresh
-// e.g. "Let's do some math" "Math rules."
-// "No math, no life"
