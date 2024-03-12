@@ -21,9 +21,16 @@ numberButtons.forEach(numBtn => {
     });
   });
 
+function limitNumberCount() {
+    if (currentNumber.length > 13) {
+        currentNumber = currentNumber.substring(0,13);
+    }
+}
+
 function appendNumber(newNum) {
     currentNumber = currentNumber.toString() + newNum.toString();
     display.textContent = currentNumber;
+    limitNumberCount();
 }
 
 
