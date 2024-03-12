@@ -12,15 +12,16 @@ numberButtons.forEach(numBtn => {
     numBtn.addEventListener('click', () => {
         appendNumber(numBtn.innerText);
     });
-  });
+});
 operatorButtons.forEach(oprBtn => {
     oprBtn.addEventListener('click', () => {
         handleSelectedOperation(oprBtn.innerText);
     })
 })
-
 clearButton.addEventListener('click', clearDisplay);
 equalButton.addEventListener('click', calculate);
+
+display.innerText = randomGreeting();
 
 function appendNumber(newNum) {
     currentNumber = currentNumber.toString() + newNum.toString();
@@ -75,6 +76,19 @@ function limitNumberCount() {
         currentNumber = currentNumber.substring(0,13);
     }
 }
+function randomGreeting() {
+    let greetingMessages = [
+        "Yo.. What's up?",
+        "Let's do math!",
+        "Math rules.",
+        "No math, no life.",
+        "Life+Math=Love",
+        "Michael is cool.",
+        "Hi, JJ!",
+        "BOOBS"
+    ]
+    var ranNum = Math.floor(Math.random() * 8);
+    return greetingMessages[ranNum];
 }
 
 
