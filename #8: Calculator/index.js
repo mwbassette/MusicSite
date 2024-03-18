@@ -36,7 +36,7 @@ document.addEventListener('keydown', (e) => {
         {calculate()}
     else if (e.key === 'Backspace' || 'c') 
         {clearDisplay()}
-    else 
+    else
         {showErrorMessage()}
 })
 
@@ -77,10 +77,10 @@ function calculate() {
         default:
             return;
     }
+    limitNumberCount()
     currentNumber = calculation
     operation = undefined
     previousNumber = ''
-    limitNumberCount()
     updateDisplay()
 }    
 function clearDisplay() {
@@ -99,8 +99,9 @@ function showErrorMessage() {
 function limitNumberCount() {
     if (currentNumber.length > 13) 
         {currentNumber = currentNumber.substring(0,13)}
-    if (calculation.length > 13) 
-        {calculation = calculation.substring(0,13)}
+    if (calculation) {
+        calculation = parseFloat(calculation.toFixed(4))
+    } 
 }
 function randomGreeting() {
     let greetingMessages = [
@@ -118,12 +119,13 @@ function randomGreeting() {
 }
 
 //Stuff I'd like to add:
-//1. Operator button keydown event listeners -- finished
+// (finished) 1. Operator button keydown event listeners
 //2. Decimal key and function handlers & html button
 //3. One character backspace key & html button
 //4. Other basic mathematical operations like squares, square roots, exponents, etc.
 
 //Problems:
-//1. Can't handle/round excessively long decimal cases - haven't worked out parseFloat() and toFixed() e.g. divide 888 by 9, numbers are outside display
+// (finished) 1. Can't handle/round excessively long decimal cases - haven't worked out parseFloat() and toFixed() e.g. divide 888 by 9, numbers are outside display
+// 1-2. Still doesn't handle e+(...) situations well, sometimes numbers are outside calculator display
 //2. Any non-integer key will either clear the display, not just backspace and c
 //3. Error messages don't display
