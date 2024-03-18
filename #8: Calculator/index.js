@@ -25,14 +25,19 @@ clearButton.addEventListener('click', clearDisplay);
 equalButton.addEventListener('click', calculate);
 
 document.addEventListener('keydown', (e) => {
+    operatorButtons.forEach(oprBtn => {
+        if (e.key === oprBtn.innerText) {
+            handleSelectedOperation(oprBtn.innerText);
+        }
+    })
     if (isFinite(e.key)) 
-        {appendNumber(e.key)}
-    else if ((previousNumber !== '') && (e.key === "Enter" || "=")) 
+        {appendNumber(e.key)} 
+    else if ((previousNumber !== '') && (e.key === 'Enter' || '=')) 
         {calculate()}
-    else if (e.key === "Backspace" || "c") 
+    else if (e.key === 'Backspace' || 'c') 
         {clearDisplay()}
-    else if (e.key === "+") 
-        {handleSelectedOperation(e.key)}
+    else 
+        {showErrorMessage()}
 })
 
 //start-up text:
@@ -46,9 +51,8 @@ function appendNumber(newNum) {
 }
 function handleSelectedOperation(selectedOperation) {
     if (currentNumber === '') return
-    if (previousNumber !== '') {
-        calculate()
-    }
+    if (previousNumber !== '') 
+        {calculate()}
     operation = selectedOperation
     previousNumber = currentNumber
     currentNumber = ''
@@ -58,13 +62,13 @@ function calculate() {
     const cur = parseFloat(currentNumber)
     if (isNaN(prev) || isNaN(cur)) return
     switch (operation) {
-        case '÷':
+        case '/':
             calculation = prev / cur;
             break;
-        case '×':
+        case '*':
             calculation = prev * cur;
             break;
-        case '−':
+        case '-':
             calculation = prev - cur;
             break;
         case '+':
@@ -93,12 +97,10 @@ function showErrorMessage() {
     display.innerText = 'Error, NaN'
 }
 function limitNumberCount() {
-    if (currentNumber.length > 13) {
-        currentNumber = currentNumber.substring(0,13)
-    }
-    if (calculation.length > 13) {
-        calculation = calculation.substring(0,13)
-    }
+    if (currentNumber.length > 13) 
+        {currentNumber = currentNumber.substring(0,13)}
+    if (calculation.length > 13) 
+        {calculation = calculation.substring(0,13)}
 }
 function randomGreeting() {
     let greetingMessages = [
@@ -116,7 +118,7 @@ function randomGreeting() {
 }
 
 //Stuff I'd like to add:
-//1. Operator button keydown event listeners
+//1. Operator button keydown event listeners -- finished
 //2. Decimal key and function handlers & html button
 //3. One character backspace key & html button
 //4. Other basic mathematical operations like squares, square roots, exponents, etc.
