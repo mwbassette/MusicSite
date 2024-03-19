@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: white;
+    color: #ffffff;
     scroll-behavior: smooth;
 }
 *::before,
@@ -33,14 +33,14 @@ body {
 nav a {
     display: inline-block;
     vertical-align: middle;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 15px;
     line-height: 20px;
     font-weight: 400;
 }
 nav a:hover {
-    color: khaki;
+    color: #f0e68c;
 }
 .nav-title-container {
     float: left;
@@ -83,7 +83,7 @@ nav a:hover {
     text-align: center;
     font-size: 30px;
     font-weight: 700;
-    color: khaki;
+    color: #f0e68c;
     text-shadow: 1px 1px 5px #1a1413;
     margin-bottom: 5px;
 }
@@ -104,7 +104,7 @@ nav a:hover {
     padding: 15px;
     border: 1px solid;
     border-radius: 10px;
-    border-color: khaki;
+    border-color: #f0e68c;
     text-align: center;
 }
 .gallery-box > * {
@@ -134,12 +134,12 @@ nav a:hover {
     background-color:#1a1413;
 }
 .large-box {
-    background-color: khaki;
+    background-color: #f0e68c;
     height: 200px;
     padding: 20px;
 }
 .medium-box {
-    background-color: teal;
+    background-color: #008080;
     height: 80px;
     width: 80px;
     margin: 5px auto;
@@ -157,25 +157,25 @@ nav a:hover {
     z-index: 3;
 }
 .small-box:first-child {
-    background-color: darkred;
+    background-color: #8b0000;
     bottom: 40px;
     right: 250px;
 }
 .small-box:nth-child(2) {
-    background-color: aquamarine;
+    background-color: #7fffd4;
     right: 100px;
     top: 10px;
     transform: rotate(45deg);
     border-radius: 50% 20% / 10% 40%;
 }
 .small-box:nth-child(3) {
-    background-color: salmon;
+    background-color: #fa8072;
     left: 100px;
     bottom: 10px;
     transform: rotate(-20deg);
 }
 .small-box:last-child {
-    background-color: green;
+    background-color: #008000;
     left: 250px;
     top: 40px;
 }
