@@ -66,12 +66,7 @@ nav a:hover {
     padding-left: 0px;
 }
 .background-image-container {
-    background-color: #1a1413;
-    background-image: url("background4.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+    background: #1a1413 url("background4.jpg") no-repeat fixed center center / cover;
     background-blend-mode: overlay;
     position: fixed;
     width: 100%;
