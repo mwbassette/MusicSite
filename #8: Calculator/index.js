@@ -126,6 +126,6 @@ function randomGreeting() {
 
 //Problems:
 // (finished) 1. Can't handle/round excessively long decimal cases - haven't worked out parseFloat() and toFixed() e.g. divide 888 by 9, numbers are outside display
-// 1-2. Still doesn't handle e+(...) situations well, sometimes numbers are outside calculator display
-//2. Any non-integer key will either clear the display, not just backspace and c
+// 1-2. Still doesn't handle "e+(...)" situations well, sometimes numbers are outside calculator display
+//2. Any non-integer key can clear the display or calculate, not just backspace/c or enter/= respectively
 //3. Error messages don't display
