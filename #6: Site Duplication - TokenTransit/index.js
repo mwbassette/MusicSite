@@ -20,51 +20,8 @@ function displayMobileNavbarLinks() {
     const links = document.querySelectorAll('.mobile-list-item');
     links.forEach(li => li.classList.toggle('js-show-mobile-nav-links'));
 }
-
-// the function below actually still doesn't match the official site since
-// when you click that site's button the color stays even after you collapse
-// the list
 function changeMobileButtonBackgroundColor() {
-    // mobileNav.classList.toggle('inactive-background');
-    // mobileNav.classList.toggle(':hover');
-
-    // const isNavButtonToggled = mobileNav.classList.contains('active-background')
-
-    // if (isNavButtonToggled === false) {
-    //   mobileNav.classList.remove(':hover')
-    // } else {
-    //   return
-    // }
-
-    
-    // if (isNavButtonToggled) {
-    //   mobileNav.style.background = 'transparent'
-    //   mobileNav.style.color = '#2899d4'
-    // } else {
-    // }
-      mobileNav.classList.toggle('active-button');
-    
-
-    
+      mobileNav.classList.toggle('active-button');    
 }
-
-
-
-
-
-
-
-
-// Below could be a cleaner version of the top code
-
-
-// const fdsafdsa = document.querySelector('.mobile-nav-button');
-// fdsafdsa.addEventListener('click', runTestFunction);
-
-// function runTestFunction() {
-//   const navList = document.querySelector('.mobile-nav-list');
-//   navList.classList.toggle('expand-nav');
-// }
-
 
 
