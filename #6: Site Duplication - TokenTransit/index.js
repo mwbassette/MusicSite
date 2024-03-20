@@ -25,7 +25,27 @@ function displayMobileNavbarLinks() {
 // when you click that site's button the color stays even after you collapse
 // the list
 function changeMobileButtonBackgroundColor() {
-    mobileNav.classList.toggle('active-background');
+    // mobileNav.classList.toggle('inactive-background');
+    // mobileNav.classList.toggle(':hover');
+
+    // const isNavButtonToggled = mobileNav.classList.contains('active-background')
+
+    // if (isNavButtonToggled === false) {
+    //   mobileNav.classList.remove(':hover')
+    // } else {
+    //   return
+    // }
+
+    
+    // if (isNavButtonToggled) {
+    //   mobileNav.style.background = 'transparent'
+    //   mobileNav.style.color = '#2899d4'
+    // } else {
+    // }
+      mobileNav.classList.toggle('active-button');
+    
+
+    
 }
 
 
