@@ -200,13 +200,24 @@ nav a:hover {
     #force-fa-size {
         line-height: 17.15px;
     }
+    .nav-list.expand-for-mobile {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 60px;
+        background-color: #1a1413;
+        border: 1px solid #f2f2f2;
+    }
+    .nav-list.nav-list.expand-for-mobile:last-child {
+        border-bottom: none;
+    }
     .list-item a.expand-for-mobile {
         display: block;
-        float: none;
+        border-bottom: 1px solid #f2f2f2;
         color: #f2f2f2;
-        text-align: right;
         padding: 14px 16px;
-        text-decoration: none;
         font-size: 17px;
     }
     .mobile-only-nav-button.mobile-position {
