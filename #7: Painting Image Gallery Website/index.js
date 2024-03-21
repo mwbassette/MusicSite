@@ -19,12 +19,9 @@ function showNavLinks() {
 }
 
 //boxart functionality
-document.addEventListener('click', handleClickForBoxArtLink())
+const boxArtLink = document.querySelector('#div-box-art-link')
+boxArtLink.addEventListener('click', showBoxArt)
 
-function handleClickForBoxArtLink() {
-    const boxArtLink = document.querySelector('#div-box-art-link')
-    boxArtLink.addEventListener('click', showBoxArt)
-}
 function showBoxArt() {
     const boxArtContainer = document.querySelector('.div-box-art-container')
     boxArtContainer.classList.toggle('js-expand')
