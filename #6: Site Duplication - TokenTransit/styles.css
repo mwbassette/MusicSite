@@ -497,6 +497,10 @@ ul.social-media-buttons li a:hover {
         line-height: 17.15px;
         overflow: visible;
     }
+    .mobile-nav-button:hover {
+        background-color: #2899d4;
+        color: #222;  
+    }
     .mobile-nav-button:active {
         background-color: #2899d4;
         color: #222;  
@@ -504,10 +508,6 @@ ul.social-media-buttons li a:hover {
     .mobile-nav-button.active-button {
         background-color: #2899d4;
         color: #222;  
-    }
-    .mobile-nav-button.inactive-background {
-        background-color: transparent;
-        color: #2899d4;
     }
     .mobile-nav-list .mobile-list-item {
         display: none;
