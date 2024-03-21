@@ -25,8 +25,8 @@ function changeMobileButtonBackgroundColor() {
   mobileNav.classList.toggle('button-is-focused')
 }
 function displayMobileNavbarLinks() {
-  if (!mobileNav) return
   const links = document.querySelectorAll('.mobile-list-item')
+  if (!links) return
   links.forEach(li => li.classList.toggle('js-show-mobile-nav-links'))
 }
 
