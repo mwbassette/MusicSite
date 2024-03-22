@@ -2,14 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: white;
+    color: #ffffff;
     scroll-behavior: smooth;
 }
-*::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+*::before,
 *::after {
     padding: 0;
     margin: 0;
@@ -37,14 +33,14 @@ body {
 nav a {
     display: inline-block;
     vertical-align: middle;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 15px;
     line-height: 20px;
     font-weight: 400;
 }
 nav a:hover {
-    color: khaki;
+    color: #f0e68c;
 }
 .nav-title-container {
     float: left;
@@ -70,12 +66,7 @@ nav a:hover {
     padding-left: 0px;
 }
 .background-image-container {
-    background-color: #1a1413;
-    background-image: url("background4.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+    background: #1a1413 url("background4.jpg") no-repeat fixed center center / cover;
     background-blend-mode: overlay;
     position: fixed;
     width: 100%;
@@ -92,7 +83,7 @@ nav a:hover {
     text-align: center;
     font-size: 30px;
     font-weight: 700;
-    color: khaki;
+    color: #f0e68c;
     text-shadow: 1px 1px 5px #1a1413;
     margin-bottom: 5px;
 }
@@ -113,13 +104,11 @@ nav a:hover {
     padding: 15px;
     border: 1px solid;
     border-radius: 10px;
-    border-color: khaki;
+    border-color: #f0e68c;
     text-align: center;
 }
 .gallery-box > * {
-    flex: 0 1 32%;
-    object-fit: cover;
-    overflow: auto;
+    width: calc(33% - 10px);
 }
 #contact {
     background-color: #1a1413;
@@ -127,7 +116,6 @@ nav a:hover {
     font-size: 20px;
     text-align: center;
 }
-
 .div-box-art-container {
     height: 600px;
     width: 600px;
@@ -143,12 +131,12 @@ nav a:hover {
     background-color:#1a1413;
 }
 .large-box {
-    background-color: khaki;
+    background-color: #f0e68c;
     height: 200px;
     padding: 20px;
 }
 .medium-box {
-    background-color: teal;
+    background-color: #008080;
     height: 80px;
     width: 80px;
     margin: 5px auto;
@@ -166,25 +154,25 @@ nav a:hover {
     z-index: 3;
 }
 .small-box:first-child {
-    background-color: darkred;
+    background-color: #8b0000;
     bottom: 40px;
     right: 250px;
 }
 .small-box:nth-child(2) {
-    background-color: aquamarine;
+    background-color: #7fffd4;
     right: 100px;
     top: 10px;
     transform: rotate(45deg);
     border-radius: 50% 20% / 10% 40%;
 }
 .small-box:nth-child(3) {
-    background-color: salmon;
+    background-color: #fa8072;
     left: 100px;
     bottom: 10px;
     transform: rotate(-20deg);
 }
 .small-box:last-child {
-    background-color: green;
+    background-color: #008000;
     left: 250px;
     top: 40px;
 }
@@ -209,13 +197,24 @@ nav a:hover {
     #force-fa-size {
         line-height: 17.15px;
     }
+    .nav-list.expand-for-mobile {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 60px;
+        background-color: #1a1413;
+        border: 1px solid #f2f2f2;
+    }
+    .nav-list.nav-list.expand-for-mobile:last-child {
+        border-bottom: none;
+    }
     .list-item a.expand-for-mobile {
         display: block;
-        float: none;
+        border-bottom: 1px solid #f2f2f2;
         color: #f2f2f2;
-        text-align: right;
         padding: 14px 16px;
-        text-decoration: none;
         font-size: 17px;
     }
     .mobile-only-nav-button.mobile-position {
@@ -248,9 +247,7 @@ nav a:hover {
         content: "\f0c9";
     }
     .gallery-box > * {
-        flex: 0 1 100%;
-        object-fit: cover;
-        overflow: auto;
+        width: 100%;
     }
     .hide-on-mobile {
         display: none;
@@ -259,9 +256,7 @@ nav a:hover {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .gallery-box > * {
-        flex: 0 1 49%;
-        object-fit: cover;
-        overflow: auto;
+        width: calc(50% - 10px);
     }
     .hide-on-tablet {
         display: none;
@@ -269,7 +264,6 @@ nav a:hover {
 }
 
 @media (min-width: 1025px) {
-
     .hide-on-desktop {
         display: none;
     }
