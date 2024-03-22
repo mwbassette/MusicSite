@@ -15,8 +15,7 @@
     width: 100%;
     background-color: transparent;
     padding: 10px 0;
-    transition: padding .3s;
-    transition: background-color 0.3s;
+    transition: padding 0.3s, background-color 0.3s;
     border: none;
     border-radius: 0;
     min-height: 50px;
@@ -502,12 +501,10 @@ ul.social-media-buttons li a:hover {
         background-color: #2899d4;
         color: #222;  
     }
-    /* Below is not what I'd prefer to do, but it matches the site */
-    .mobile-nav-button.active-background {
+    .mobile-nav-button.button-is-focused {
         background-color: #2899d4;
         color: #222;  
     }
-    /* :] */
     .mobile-nav-list .mobile-list-item {
         display: none;
     }

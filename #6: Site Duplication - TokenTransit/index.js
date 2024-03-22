@@ -1,50 +1,40 @@
-window.addEventListener('scroll', setNavbarBackground);
-window.addEventListener('resize', setNavbarBackground);
+//Nav Background Functionality:
+window.addEventListener('scroll', setNavbarBackground)
+window.addEventListener('resize', setNavbarBackground)
+setNavbarBackground()
 
 function setNavbarBackground() {
+  const mobileWindowSize = window.innerWidth <= 767
   const hasUserScrolledDown = document.body.scrollTop > 10 || document.documentElement.scrollTop > 10;
-  let navbar = document.getElementById("navbar");
-
-  if (window.screen.width <= 767) {
-    navbar.style.background = "#222";
+  const navbar = document.getElementById("navbar")
+  if (!navbar) return
+  if (!mobileWindowSize) {
+    navbar.style.background = hasUserScrolledDown ? "#222" : "transparent"
   } else {
-    navbar.style.background = hasUserScrolledDown ? "#222" : "transparent";
+    navbar.style.background = "#222"
   }
 }
 
+//Nav Button Functionality:
 const mobileNav = document.querySelector('.mobile-nav-button')
-mobileNav.addEventListener('click', displayMobileNavbarLinks);
-mobileNav.addEventListener('click', changeMobileButtonBackgroundColor);
+addMobileNavClickHandling()
 
-function displayMobileNavbarLinks() {
-    const links = document.querySelectorAll('.mobile-list-item');
-    links.forEach(li => li.classList.toggle('js-show-mobile-nav-links'));
+function addMobileNavClickHandling() {
+  if (!mobileNav) return
+  mobileNav.addEventListener('click', handleMobileNavClick);
 }
-
-// the function below actually still doesn't match the official site since
-// when you click that site's button the color stays even after you collapse
-// the list
+function handleMobileNavClick() {
+  changeMobileButtonBackgroundColor()
+  displayMobileNavbarLinks()
+}
 function changeMobileButtonBackgroundColor() {
-    mobileNav.classList.toggle('active-background');
+  if (!mobileNav) return
+  mobileNav.classList.toggle('button-is-focused')
 }
-
-
-
-
-
-
-
-
-// Below could be a cleaner version of the top code
-
-
-// const fdsafdsa = document.querySelector('.mobile-nav-button');
-// fdsafdsa.addEventListener('click', runTestFunction);
-
-// function runTestFunction() {
-//   const navList = document.querySelector('.mobile-nav-list');
-//   navList.classList.toggle('expand-nav');
-// }
+function displayMobileNavbarLinks() {
+  const links = document.querySelectorAll('.mobile-list-item')
+  links.forEach(li => li.classList.toggle('js-show-mobile-nav-links'))
+}
 
 
 
