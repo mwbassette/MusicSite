@@ -116,7 +116,6 @@ nav a:hover {
     font-size: 20px;
     text-align: center;
 }
-
 .div-box-art-container {
     height: 600px;
     width: 600px;
@@ -265,7 +264,6 @@ nav a:hover {
 }
 
 @media (min-width: 1025px) {
-
     .hide-on-desktop {
         display: none;
     }
