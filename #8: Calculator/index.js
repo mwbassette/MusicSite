@@ -1,8 +1,13 @@
 //variables:
+const allButtons = document.querySelectorAll(".button");
 const numberButtons = document.querySelectorAll(".number");
 const operatorButtons = document.querySelectorAll(".operator");
+const backspaceButton = document.querySelector(".backspace");
+const powerButton = document.querySelector(".power");
 const clearButton = document.querySelector(".clear");
 const equalButton = document.querySelector(".equal");
+const decimalButton = document.querySelector(".decimal");
+const posNegButton = document.querySelector(".posNeg");
 const display = document.querySelector(".display-area");
 
 let currentNumber = '';
@@ -10,7 +15,7 @@ let previousNumber = '';
 let calculation = '';
 let operation = null;
 
-//event listeners:
+//click event listeners:
 numberButtons.forEach(numBtn => {
     numBtn.addEventListener('click', () => {
         appendNumber(numBtn.innerText);
@@ -22,6 +27,10 @@ operatorButtons.forEach(oprBtn => {
     })
 })
 clearButton.addEventListener('click', clearDisplay);
+powerButton.addEventListener('click', toggleCalcPower);
+backspaceButton.addEventListener('click', removeLastCharacter);
+decimalButton.addEventListener('click', appendDecimal);
+posNegButton.addEventListener('click', togglePosNegNumber)
 equalButton.addEventListener('click', calculate);
 
 document.addEventListener('keydown', (e) => {
