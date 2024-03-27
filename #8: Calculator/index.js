@@ -59,8 +59,8 @@ document.addEventListener('keydown', (e) => {
         appendDecimal()
     } else {
         return
-        }
-    })
+    }
+})
 document.addEventListener('keyup', (e) => {
     allButtons.forEach(btn => {
         if (e.key === btn.innerText) {
@@ -77,14 +77,25 @@ display.innerText = randomGreeting()
 
 //essential functions:
 function appendNumber(newNum) {
+    if (newNum === '.' && currentNumber.includes('.')) {return}
     currentNumber = currentNumber.toString() + newNum.toString()
     limitNumberCount()
     updateDisplay()
 }
+function appendDecimal() {
+    if (currentNumber.includes('.')) {return}
+    if (currentNumber === '') {currentNumber = '0'}
+    currentNumber += '.'
+    updateDisplay();
+}
+function togglePosNegNumber() {
+    currentNumber = Math.abs(currentNumber) * -1;
+    updateDisplay()
+    //No keydown handler because of addition & subtraction conflicts
+}
 function handleSelectedOperation(selectedOperation) {
     if (currentNumber === '') return
-    if (previousNumber !== '') 
-        {calculate()}
+    if (previousNumber !== '') {calculate()}
     operation = selectedOperation
     previousNumber = currentNumber
     currentNumber = ''
@@ -109,16 +120,28 @@ function calculate() {
         default:
             return;
     }
-    limitNumberCount()
     currentNumber = calculation
     operation = undefined
     previousNumber = ''
     updateDisplay()
 }    
 function clearDisplay() {
+    console.log("Display cleared");
     display.innerText = ''
     currentNumber = ''
     previousNumber = ''
+}
+function removeLastCharacter() {
+    currentNumber = currentNumber.toString().slice(0, -1)
+    updateDisplay()
+}
+function limitNumberCount() {
+    if (currentNumber.length > 10) {
+        currentNumber = currentNumber.substring(0,10)
+    }
+    if (calculation) {
+        calculation = parseFloat(calculation.toFixed(4))
+    } 
 }
 function updateDisplay() {
     display.innerText = currentNumber
@@ -132,14 +155,15 @@ function animateButtonLift(btn) {
     btn.classList.remove("js-active");
 }
 function showErrorMessage() {
+    console.log("Error message successfully displayed.");
     display.innerText = 'Error, NaN'
 }
-function limitNumberCount() {
-    if (currentNumber.length > 13) 
-        {currentNumber = currentNumber.substring(0,13)}
-    if (calculation) {
-        calculation = parseFloat(calculation.toFixed(4))
-    } 
+function toggleCalcPower() {
+    if (display.innerText !== '') {
+        clearDisplay()
+    } else {
+        randomGreeting()
+    }
 }
 function randomGreeting() {
     let greetingMessages = [
