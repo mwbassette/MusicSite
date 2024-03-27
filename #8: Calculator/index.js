@@ -25,19 +25,23 @@ clearButton.addEventListener('click', clearDisplay);
 equalButton.addEventListener('click', calculate);
 
 document.addEventListener('keydown', (e) => {
+    allButtons.forEach(btn => {
+        if (e.key === btn.innerText) {animateButtonPress(btn)}
+    })
     operatorButtons.forEach(oprBtn => {
         if (e.key === oprBtn.innerText) {
             handleSelectedOperation(oprBtn.innerText);
         }
     })
-    if (isFinite(e.key)) 
-        {appendNumber(e.key)} 
-    else if ((previousNumber !== '') && (e.key === 'Enter' || '=')) 
-        {calculate()}
-    else if (e.key === 'Backspace' || 'c') 
-        {clearDisplay()}
-    else
-        {showErrorMessage()}
+document.addEventListener('keyup', (e) => {
+    allButtons.forEach(btn => {
+        if (e.key === btn.innerText) {
+            animateButtonLift(btn)
+        }
+        else if (e.key === 'Backspace') {
+            animateButtonLift(backspaceButton)
+        }
+    })
 })
 
 //start-up text:
@@ -93,6 +97,12 @@ function updateDisplay() {
 }
 
 //optimization functions:
+function animateButtonPress(btn) {
+    btn.classList.add("js-active");
+}
+function animateButtonLift(btn) {
+    btn.classList.remove("js-active");
+}
 function showErrorMessage() {
     display.innerText = 'Error, NaN'
 }
