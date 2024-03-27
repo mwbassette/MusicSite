@@ -33,13 +33,32 @@ decimalButton.addEventListener('click', appendDecimal);
 posNegButton.addEventListener('click', togglePosNegNumber)
 equalButton.addEventListener('click', calculate);
 
+//keydown event listeners:
 document.addEventListener('keydown', (e) => {
+    console.log(e);
     allButtons.forEach(btn => {
-        if (e.key === btn.innerText) {animateButtonPress(btn)}
+        if (e.key === btn.innerText) {
+            animateButtonPress(btn)
+        }
     })
     operatorButtons.forEach(oprBtn => {
         if (e.key === oprBtn.innerText) {
-            handleSelectedOperation(oprBtn.innerText);
+            handleSelectedOperation(oprBtn.innerText)
+        }
+    })
+    if (isFinite(e.key)) {
+        appendNumber(e.key)
+    } else if ((previousNumber !== '') && (e.key === 'Enter' || '=')) {
+        calculate()
+    } else if (e.key === 'Delete' || e.key === 'c') {
+        clearDisplay()
+    } else if (e.key === 'Backspace') {
+        animateButtonPress(backspaceButton)
+        removeLastCharacter()  
+    } else if (e.key === '.') {
+        appendDecimal()
+    } else {
+        return
         }
     })
 document.addEventListener('keyup', (e) => {
