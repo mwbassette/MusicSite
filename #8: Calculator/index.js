@@ -49,14 +49,19 @@ document.addEventListener('keydown', (e) => {
     if (isFinite(e.key)) {
         appendNumber(e.key)
     } else if ((previousNumber !== '') && (e.key === 'Enter' || '=')) {
+        animateButtonPress(equalButton)
         calculate()
     } else if (e.key === 'Delete' || e.key === 'c') {
+        animateButtonPress(clearButton)
         clearDisplay()
     } else if (e.key === 'Backspace') {
         animateButtonPress(backspaceButton)
         removeLastCharacter()  
     } else if (e.key === '.') {
         appendDecimal()
+    } else if (e.key === 'o') {
+        animateButtonPress(powerButton)
+        toggleCalcPower()
     } else {
         return
     }
@@ -65,9 +70,14 @@ document.addEventListener('keyup', (e) => {
     allButtons.forEach(btn => {
         if (e.key === btn.innerText) {
             animateButtonLift(btn)
-        }
-        else if (e.key === 'Backspace') {
+        } else if (e.key === 'Backspace') {
             animateButtonLift(backspaceButton)
+        } else if (e.key === 'Enter') {
+            animateButtonLift(equalButton)
+        } else if (e.key === 'o') {
+            animateButtonLift(powerButton)
+        } else if (e.key === 'Delete' || e.key === 'c') {
+            animateButtonLift(clearButton)
         }
     })
 })
