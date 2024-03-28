@@ -169,11 +169,8 @@ function showErrorMessage() {
     display.innerText = 'Error, NaN'
 }
 function toggleCalcPower() {
-    if (display.innerText !== '') {
+    display.classList.toggle("hide-input");
         clearDisplay()
-    } else {
-        randomGreeting()
-    }
 }
 function randomGreeting() {
     let greetingMessages = [

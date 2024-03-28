@@ -40,6 +40,9 @@
     font-weight: 999;
     font-size: 72px;
 }
+.hide-input {
+    font-size: 0px;
+}
 .button-area {
     margin: 0px 30px;
     height: 450px;
