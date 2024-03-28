@@ -103,5 +103,35 @@
 }
 
 @media (max-width: 767px) {
-
+    .calculator-container {
+        height: 350px;
+        width: 320px;
+    }
+    .display-area {
+        margin: 10px 10px 0px 10px;
+        height: 45px;
+        font-size: 40px;
+        padding-right: 10px;
+    }
+    .hide-input {
+        font-size: 0px;
+    }
+    .button-area {
+        height: 270px;
+        width: 300px;
+        margin: 0px 10px;
+        justify-content: space-between;
+    }
+    .button {
+        height: 45px;
+        width: 45px;
+        font-size: 25px;
+        border-radius: 3px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .bottom {
+        position: static;
+        text-align: center;
+    }
 }
