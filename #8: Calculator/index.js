@@ -146,11 +146,14 @@ function removeLastCharacter() {
     updateDisplay()
 }
 function limitNumberCount() {
-    if (currentNumber.length > 10) {
-        currentNumber = currentNumber.substring(0,10)
+    if (currentNumber.length > 13) {
+        currentNumber = currentNumber.substring(0,13)
     }
     if (calculation) {
         calculation = parseFloat(calculation.toFixed(4))
+    }
+    if (calculation && calculation > 9999999999999) {
+        calculation = calculation.toPrecision(10)
     } 
 }
 function updateDisplay() {
