@@ -35,7 +35,6 @@ equalButton.addEventListener('click', calculate);
 
 //keydown event listeners:
 document.addEventListener('keydown', (e) => {
-    console.log(e);
     allButtons.forEach(btn => {
         if (e.key === btn.innerText) {
             animateButtonPress(btn)
@@ -130,16 +129,18 @@ function calculate() {
         default:
             return;
     }
+    limitNumberCount()
     currentNumber = calculation
     operation = undefined
     previousNumber = ''
     updateDisplay()
 }    
 function clearDisplay() {
-    console.log("Display cleared");
     display.innerText = ''
     currentNumber = ''
     previousNumber = ''
+    calculation = ''
+    operation = null
 }
 function removeLastCharacter() {
     currentNumber = currentNumber.toString().slice(0, -1)
@@ -168,12 +169,11 @@ function animateButtonLift(btn) {
     btn.classList.remove("js-active");
 }
 function showErrorMessage() {
-    console.log("Error message successfully displayed.");
     display.innerText = 'Error, NaN'
 }
 function toggleCalcPower() {
     display.classList.toggle("hide-input");
-        clearDisplay()
+    clearDisplay()
 }
 function randomGreeting() {
     let greetingMessages = [
